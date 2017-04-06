@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+class Solution {
+    static void Main(String[] args){
+        string testCaseNumber = Console.ReadLine();
+        int x = Int32.Parse(testCaseNumber);
+        
+        for (int t = 1; t <= x; t++){
+            string str = Console.ReadLine();
+        
+        List<char> evenIndex = new List<char>();
+        List<char> oddIndex = new List<char>();
+        
+        for (int i = 0; i <= 10000; i++){
+        if (i % 2 == 0){
+            if (i == str.Length){
+                break;
+            }
+            else{
+                char even = str[i];
+                evenIndex.Add(even);
+            }
+        }
+        else{
+            if(i == str.Length){
+                break;
+            }
+            else{
+                char odd = str[i];
+                oddIndex.Add(odd);   
+            }
+        }
+        }
+        Console.Write(string.Join("",evenIndex));
+        Console.Write(" ");
+        Console.Write(string.Join("",oddIndex));
+        Console.Write(Environment.NewLine);
+        
+    }
+}
+}
